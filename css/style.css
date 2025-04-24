@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Kenia&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #C9A7EB; }
+
+h2 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 3rem; }
+
+h3 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem; }
+
+h4 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem; }
+
+.contour {
+  width: 20rem;
+  background-color: #000;
+  border-bottom-right-radius: 25rem;
+  border-top-right-radius: 25rem;
+  box-shadow: 0 0 1rem #fefefe2e;
+  padding: .5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer; }
+  .contour p {
+    color: #C9A7EB !important;
+    font-family: "Winky Rough", sans-serif;
+    font-weight: 600; }
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: all .3s ease-in-out; }
+
+nav.scroll {
+  background-color: #272727;
+  box-shadow: 0 0 1rem #0000002e; }
+
+.navigation__brand {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Kenia", sans-serif;
+  cursor: pointer; }
+  .navigation__brand span {
+    font-size: 6rem; }
+
+.navigation__bars {
+  font-size: 3.5rem;
+  color: #fff;
+  cursor: pointer; }
+  .navigation__bars i {
+    background-color: #000;
+    padding: 1rem 1rem 1rem 6rem;
+    border-top-left-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    box-shadow: 0 0 1rem #fefefe2e; }
+
+.navigation__items.active {
+  transform: translateX(0); }
+
+.navigation__items {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  height: 100%;
+  overflow-y: auto;
+  width: 40%;
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 5rem;
+  box-shadow: 0 0 1rem #0000002e;
+  transform: translateX(100%);
+  transition: all .4s ease-in-out; }
+  .navigation__items i {
+    background: transparent;
+    box-shadow: none;
+    display: inline-flex;
+    align-self: flex-end; }
+  .navigation__items li {
+    list-style: none;
+    font-size: 2.5rem; }
+    .navigation__items li a {
+      text-decoration: none;
+      color: #555;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      letter-spacing: .25rem;
+      transition: all .3s; }
+    .navigation__items li a:hover {
+      color: #C9A7EB;
+      transform: translateX(5rem) scale(1.3); }
+  .navigation__items-rs {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 0;
+    text-align: start;
+    gap: 4rem;
+    padding: 5rem 0; }
+    .navigation__items-rs i {
+      padding: 0 !important; }
+
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  right: 4rem;
+  transform: translateY(-50%);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: 100; }
+
+.dot-nav li a span {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #555;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 2px solid transparent; }
+
+.dot-nav li a:hover span,
+.dot-nav li a.active span {
+  background-color: #C9A7EB;
+  transform: scale(1.3);
+  border-color: #fff; }
+
+.hero {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(135deg, #1E1E1E, #151515);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 5rem;
+  overflow: hidden; }
+  .hero__content {
+    position: relative;
+    height: 100%;
+    margin-top: 10rem; }
+    .hero__content h1 {
+      font-size: 9rem;
+      color: #fff;
+      line-height: 8rem;
+      font-family: "Winky Rough", sans-serif;
+      padding: 1rem 0; }
+      .hero__content h1 span {
+        color: #C9A7EB; }
+    .hero__content p {
+      font-size: 2.5rem;
+      color: #fff;
+      width: 45%;
+      padding: 1rem 0; }
+    .hero__content div i {
+      padding: 1.5rem 1.8rem;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer; }
+  .hero__image {
+    position: relative; }
+    .hero__image img {
+      width: 40rem;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: scale(2.2) translateY(8rem); }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    opacity: .05;
+    z-index: 0; }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.02), transparent);
+    clip-path: polygon(0% 10%, 100% 0%, 90% 90%, 10% 100%);
+    z-index: 0; }
+
+.section2 {
+  background-image: linear-gradient(135deg, #1E1E1E, #151515);
+  min-height: 100vh;
+  height: 100%;
+  width: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column; }
+  .section2 h2 {
+    font-size: 4rem;
+    color: #fff;
+    font-family: "Winky Rough", sans-serif; }
+    .section2 h2 span {
+      color: #C9A7EB;
+      font-size: 6rem; }
+  .section2__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 5rem;
+    cursor: pointer; }
+    .section2__cards--item {
+      padding: 4rem 3rem;
+      border-radius: 2rem;
+      height: 100%;
+      box-shadow: 0 0 1rem #0000002e;
+      transition: all .3s; }
+      .section2__cards--item h3 {
+        padding: 2rem 0;
+        color: #fff; }
+      .section2__cards--item p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #3c3c3c; }
+      .section2__cards--item i {
+        font-size: 7rem;
+        color: #C9A7EB; }
+      .section2__cards--item:hover {
+        box-shadow: 0 0 1rem #c603f72e;
+        transform: scale(1.05); }
+  .section2__button button {
+    border: none;
+    background-color: transparent;
+    padding: 1rem; }
+    .section2__button button a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Winky Rough", sans-serif; }
+  .section2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    opacity: .05;
+    z-index: 0; }

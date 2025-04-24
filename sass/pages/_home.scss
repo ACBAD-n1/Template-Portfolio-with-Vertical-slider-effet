@@ -1,0 +1,170 @@
+.hero {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-image: $background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 5rem;
+    overflow: hidden;
+
+    &__content {
+        position: relative;
+        height: 100%;
+        margin-top: 10rem;
+
+        h1 {
+            font-size: 9rem;
+            color: #fff;
+            line-height: 8rem;
+            font-family: "Winky Rough", sans-serif;
+            padding: 1rem 0;
+
+            span {
+                color: $color-primary;
+            }
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: #fff;
+            width: 45%;
+            padding: 1rem 0;
+        }
+
+        div i {
+            padding: 1.5rem 1.8rem;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            font-size: 1.5rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+    }
+
+    &__image {
+        position: relative;
+        // overflow: hidden;
+
+        img {
+            width: 40rem;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+          
+            transform: scale(2.2) translateY(8rem);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); // crystal-style pattern
+        opacity: .05;
+        z-index: 0;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        width: 80%;
+        height: 80%;
+        background: linear-gradient(45deg, rgba(255,255,255,0.02), transparent);
+        clip-path: polygon(0% 10%, 100% 0%, 90% 90%, 10% 100%);
+        z-index: 0;
+    }
+}
+
+
+.section2{
+    background-image: $background;
+    min-height: 100vh;
+    height: 100%;
+    width: auto;
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 4rem;
+        color: #fff;
+        font-family: "Winky Rough", sans-serif;
+
+        span {
+            color: $color-primary;
+            font-size: 6rem;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        padding: 5rem;
+        cursor: pointer;
+
+        &--item {
+            padding: 4rem 3rem;
+            border-radius: 2rem;
+            height: 100%;
+            box-shadow: $shadow-black;
+            transition: all .3s;
+
+            h3 {
+                padding: 2rem 0;
+                color: #fff;
+            }
+
+            p {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #3c3c3c;
+            }
+
+            i {
+                font-size: 7rem;
+                color: $color-primary;
+            }
+
+            &:hover {
+                box-shadow: 0 0 1rem #c603f72e;
+                transform: scale(1.05);
+            }
+        }
+
+    }
+
+    &__button {
+
+        button {
+            border: none;
+            background-color: transparent;
+            padding: 1rem;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-family: "Winky Rough", sans-serif;;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); // crystal-style pattern
+        opacity: .05;
+        z-index: 0;
+    }
+    
+}

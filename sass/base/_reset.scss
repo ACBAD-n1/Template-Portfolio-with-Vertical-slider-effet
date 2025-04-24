@@ -1,0 +1,38 @@
+// Google font 
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+// COLOR VARIABLES
+$color-primary: #C9A7EB;
+$color-secondary: #3C3C3C;
+$color-secondary-dark: #89769B;
+$background: linear-gradient(135deg, #1E1E1E, #151515); //#1E1E1E;
+
+// Shadow
+$shadow-white: 0 0 1rem #fefefe2e;
+$shadow-black: 0 0 1rem #0000002e;
+
+// Font Familly
+$roboto: "Roboto", sans-serif;
+$winky: "Winky Rough", sans-serif;
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 0;
+    box-sizing: border-box;
+}
