@@ -231,9 +231,13 @@ nav.scroll {
   min-height: 100vh;
   height: 100%;
   width: auto;
-  padding: 5rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  padding: 5rem 5rem 15rem 5rem;
+  gap: 5rem; }
   .section2 h2 {
     font-size: 4rem;
     color: #fff;
@@ -241,43 +245,141 @@ nav.scroll {
     .section2 h2 span {
       color: #C9A7EB;
       font-size: 6rem; }
-  .section2__cards {
+  .section2__bgtitle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    display: flex;
+    align-items: center;
+    color: #ffffff24;
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 3rem;
+    font-family: "Winky Rough", sans-serif;
+    white-space: nowrap;
+    padding-left: 2rem;
+    z-index: 1; }
+  .section2__cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    width: 100%;
+    flex-wrap: wrap; }
+  .section2__card-right:hover, .section2__card-left:hover {
+    box-shadow: 0 0 1rem #C9A7EB;
+    transform: scale(1.02); }
+  .section2__card-right:hover {
+    transform: scale(1.02) translateY(10rem); }
+  .section2__card-left, .section2__card-right {
+    width: 35%;
+    height: auto;
+    font-size: 1.5rem;
+    box-shadow: 0 0 1rem #000000a2;
+    padding: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    transition: all .3s ease-in-out; }
+    .section2__card-left h2, .section2__card-right h2 {
+      color: #fff; }
+    .section2__card-left h3, .section2__card-right h3 {
+      color: #fff;
+      font-size: 4rem;
+      font-family: "Winky Rough", sans-serif; }
+    .section2__card-left p, .section2__card-right p {
+      color: #ffffff24;
+      font-size: 1.5rem;
+      font-family: "Roboto", sans-serif; }
+    .section2__card-left--title, .section2__card-right--title {
+      position: absolute;
+      top: -4rem;
+      left: 3rem; }
+  .section2__card-left img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover; }
+  .section2__card-right {
+    transform: translateY(10rem); }
+  .section2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("/img/wall.png");
+    opacity: 0.2;
+    z-index: 0; }
+
+.section3 {
+  background-image: linear-gradient(135deg, #1E1E1E, #151515);
+  min-height: 100vh;
+  height: 100%;
+  width: auto;
+  padding: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .section3__bgtitle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    display: flex;
+    align-items: center;
+    color: #ffffff24;
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 3rem;
+    font-family: "Winky Rough", sans-serif;
+    white-space: nowrap;
+    padding-left: 2rem;
+    z-index: 1; }
+  .section3 h2 {
+    font-size: 4rem;
+    color: #fff;
+    font-family: "Winky Rough", sans-serif; }
+    .section3 h2 span {
+      color: #C9A7EB;
+      font-size: 6rem; }
+  .section3__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     padding: 5rem;
     cursor: pointer; }
-    .section2__cards--item {
+    .section3__cards--item {
       padding: 4rem 3rem;
       border-radius: 2rem;
       height: 100%;
       box-shadow: 0 0 1rem #0000002e;
-      transition: all .3s; }
-      .section2__cards--item h3 {
+      transition: all .3s;
+      z-index: 10; }
+      .section3__cards--item h3 {
         padding: 2rem 0;
-        color: #fff; }
-      .section2__cards--item p {
+        color: #fff;
+        z-index: 10; }
+      .section3__cards--item p {
         font-size: 1.6rem;
         font-weight: 400;
         color: #3c3c3c; }
-      .section2__cards--item i {
+      .section3__cards--item i {
         font-size: 7rem;
         color: #C9A7EB; }
-      .section2__cards--item:hover {
+      .section3__cards--item:hover {
         box-shadow: 0 0 1rem #c603f72e;
         transform: scale(1.05); }
-  .section2__button button {
+  .section3__button button {
     border: none;
     background-color: transparent;
     padding: 1rem; }
-    .section2__button button a {
+    .section3__button button a {
       text-decoration: none;
       color: #fff;
       font-family: "Winky Rough", sans-serif; }
-  .section2::before {
+  .section3::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
-    opacity: .05;
+    background-image: url("/img/light.png");
+    opacity: .25;
     z-index: 0; }

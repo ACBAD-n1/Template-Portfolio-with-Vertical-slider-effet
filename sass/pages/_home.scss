@@ -84,15 +84,153 @@
 }
 
 
-.section2{
+.section2 {
+    background-image: $background;
+    min-height: 100vh;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    padding: 5rem 5rem 15rem 5rem;
+    gap: 5rem;
+
+    h2 {
+        font-size: 4rem;
+        color: #fff;
+        font-family: "Winky Rough", sans-serif;
+
+        span {
+            color: $color-primary;
+            font-size: 6rem;
+        }
+    }
+
+    &__bgtitle {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(-90deg);
+        display: flex;
+        align-items: center;
+        color: #ffffff24;
+        font-size: 10rem;
+        font-weight: 900;
+        letter-spacing: 3rem;
+        font-family: $winky;
+        white-space: nowrap;
+        padding-left: 2rem; // optional: to push text a bit inside
+        z-index: 1;
+    }
+
+    // Flex wrapper to align cards
+    &__cards-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+       &-right:hover, &-left:hover {
+            box-shadow: 0 0 1rem $color-primary;
+            transform: scale(1.02);
+        }
+
+        &-right:hover {
+            transform: scale(1.02) translateY(10rem);
+        }
+
+        &-left, &-right {
+            width: 35%;
+            height: auto;
+            font-size: 1.5rem;
+            box-shadow: 0 0 1rem #000000a2;
+            padding: 2rem;
+            cursor: pointer;
+            z-index: 10;
+            position: relative;
+            transition: all .3s ease-in-out;
+
+            h2 {
+                color: #fff;
+            }
+
+            h3 {
+                color: #fff;
+                font-size: 4rem;
+                font-family: $winky;
+            }
+
+            p {
+                color: #ffffff24;
+                font-size: 1.5rem;
+                font-family: $roboto;
+            }
+
+            &--title {
+                position: absolute;
+                top: -4rem;
+                left: 3rem;
+            }
+        }
+
+        &-left {
+            img {
+                height: 50%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-right {
+            transform: translateY(10rem);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/img/wall.png'); // crystal-style pattern
+        opacity: 0.2;
+        z-index: 0;
+    }
+}
+
+
+
+.section3 {
     background-image: $background;
     min-height: 100vh;
     height: 100%;
     width: auto;
     padding: 5rem;
+    position: relative;
 
     display: flex;
     flex-direction: column;
+
+    &__bgtitle {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(-90deg);
+        display: flex;
+        align-items: center;
+        color: #ffffff24;
+        font-size: 10rem;
+        font-weight: 900;
+        letter-spacing: 3rem;
+        font-family: $winky;
+        white-space: nowrap;
+        padding-left: 2rem; // optional: to push text a bit inside
+        z-index: 1;
+    }
 
     h2 {
         font-size: 4rem;
@@ -118,10 +256,12 @@
             height: 100%;
             box-shadow: $shadow-black;
             transition: all .3s;
+            z-index: 10;
 
             h3 {
                 padding: 2rem 0;
                 color: #fff;
+                z-index: 10;
             }
 
             p {
@@ -162,8 +302,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); // crystal-style pattern
-        opacity: .05;
+        background-image: url('/img/light.png'); // crystal-style pattern
+        opacity: .25;
         z-index: 0;
     }
     
