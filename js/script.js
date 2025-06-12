@@ -37,7 +37,59 @@ menuActivate.addEventListener('toggle', () => {
 
 })
 
+// Home page scrolling effect
+const sections = document.querySelectorAll('.section');
+let currentSection = 0;
+let isScrolling = 0;
 
+function scrollToSection(index){
+    if(index < 0 || index >= sections.length) return;
+
+    isScrolling = true;
+    sections[index].scrollIntoView({ behavior: 'smooth' });
+    currentSection = index;
+
+    setTimeout(()=> {
+        isScrolling = false;
+    }, 1000);
+}
+
+
+document.addEventListener('wheel', (e) => {
+    if (isScrolling) return;
+
+    if (e.deltaY > 0) {
+        scrollToSection(currentSection + 1);
+    } else {
+        scrollToSection(currentSection - 1);
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (isScrolling) return;
+
+    if (e.key === 'ArrowDown') scrollToSection(currentSection + 1);
+    if (e.key === 'ArrowUp') scrollToSection(currentSection - 1);
+});
+
+
+// Touch option for mobile
+
+let touchStartY = 0;
+document.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', (e) => {
+    if (isScrolling) return;
+    const touchEndY = e.changedTouches[0].clientY;
+
+    if (touchStartY - touchEndY > 50) {
+        scrollToSection(currentSection + 1); // swipe up
+    } else if (touchEndY - touchStartY > 50) {
+        scrollToSection(currentSection - 1); // swipe down
+    }
+});
 
 
 
